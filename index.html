@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+    <head></head>
+        <style>
+            body {
+                /* grid code from https://stackoverflow.com/questions/3540194/how-to-make-a-grid-like-graph-paper-grid-with-just-css */
+                background-size: 40px 40px;
+                background-image:
+                linear-gradient(to right, rgb(41, 41, 41) 3px, transparent 2px),
+                linear-gradient(to bottom, rgb(41, 41, 41) 3px, #0f0f0f 2px);
+            }
+            .dark-mode{
+                transition: all 3s;
+                background-size: 40px 40px;
+                background-image:
+                linear-gradient(to right, rgb(235, 235, 235) 3px, transparent 2px),
+                linear-gradient(to bottom, rgb(235, 235, 235) 3px, #ffffff 2px);
+            }
+            #left-right-margins{
+                /* background-color: darkkhaki; */
+                width: 100vw;
+                height: 100vh;
+            }
+            #central-space{
+                /* background-color: blanchedalmond; */
+                width: 75vw;
+                height: 100vh;
+                translate: transformX(50%);
+            }
+            
+            #phone-pos{
+                display: flex;
+                justify-content: center;
+                position: relative;
+            }
+            #phone-outline {
+                background-color: black;
+                width: 300px;
+                height: 600px;
+                border-radius: 50px;
+                border: 1px solid #ffffff78;
+                box-shadow: 20px 20px 50px rgb(24, 24, 24);
+    
+                position: absolute;
+                /* left: 25%;
+                right: 25%; */
+                translate: 0 5%;
+                transition: all 0.5s;
+                
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                 
+                /*border-width: 100px;
+                border-color: black;*/
+            }
+
+            #screen{
+                position: absolute;
+                background-color: lightskyblue;
+                height: 487px;
+                width: 279px;
+                /* border-radius: 43px; */
+
+                /* justify-content: center; */
+                /* flex-direction: column; */
+            }
+
+            #app-container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #home-button {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                border-radius: 20px;
+                translate: 0 270px;
+
+                background-color: grey;
+                transition: 0.2s
+            }
+            #home-button:hover{
+                background-color: lightgrey;
+                transition: 0.2s 
+            }
+
+            .app{
+                background-color: purple;
+                width: 50px;
+                height: 50px;
+                border-radius: 13px;
+                margin: 8px;
+                translate: 14% 20%;
+            }
+
+            #app1{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s
+            }
+            #app1:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
+            #app2{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s;
+                background-color: rgb(34, 34, 34);
+            }
+            #app2:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
+            #app3{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s
+            }
+            #app3:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
+            #app4{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s
+            }
+            #app4:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
+            #app5{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s
+            }
+            #app5:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+        </style>
+        <script src="jscript.js"></script>
+    </head>
+    
+    <body>
+        <div id="left-right-margins">
+            <div id="central-spcae">
+                <div id="phone-pos">
+                    <div id="phone-outline">
+                        <div id="screen">
+                            <div id="app-container">
+                                <div class="app" id="app1" onclick="app1()"></div>
+                                <div class="app" id="app2" onclick="app2()"></div>
+                                <div class="app" id="app3" onclick="app3()"></div>
+                                <div class="app" id="app4" onclick="app4()"></div>
+                                <div class="app" id="app5" onclick="app5()"></div>
+                            </div>
+                        </div>
+                        <div onclick="homeFunct()" id="home-button">
+                        </div>
+                    </div>
+                </div>
+                <!-- <button onclick="appSlidePhone()">App stand in</button> -->
+                <!-- <button onclick="homeFunct()">Home button</button> -->
+            </div>
+        </div>
+    </body>
+</html>
