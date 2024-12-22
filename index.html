@@ -15,7 +15,21 @@
                 background-size: 40px 40px;
                 background-image:
                 linear-gradient(to right, rgb(235, 235, 235) 3px, transparent 2px),
-                linear-gradient(to bottom, rgb(235, 235, 235) 3px, #ffffff 2px);
+                linear-gradient(to bottom, rgb(235, 235, 235) 3px, #ffffff 2px);    
+                animation: smooth-moves ease 2s;
+                
+                @keyframes smooth-moves {
+                    0% {
+                        background-image:
+                linear-gradient(to right, rgb(41, 41, 41) 3px, transparent 2px),
+                linear-gradient(to bottom, rgb(41, 41, 41) 3px, #0f0f0f 2px);
+                    },
+                    100% {
+                        background-image:
+                linear-gradient(to right, rgb(235, 235, 235) 3px, transparent 2px),
+                linear-gradient(to bottom, rgb(235, 235, 235) 3px, #ffffff 2px);    
+                    };
+                }
             }
             #left-right-margins{
                 /* background-color: darkkhaki; */
@@ -53,11 +67,29 @@
                 justify-content: center;
                 align-items: center;
                  
+                z-index: 999;
                 /*border-width: 100px;
                 border-color: black;*/
             }
 
-            #screen{
+            #camera {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                background-color: rgb(74, 74, 74);
+                border-radius: 20px;
+                translate: 0 -278px;
+            }
+            #speaker {
+                position: absolute;
+                width: 50px;
+                height: 5px;
+                background-color: rgb(39, 39, 39);
+                border-radius: 20px;
+                translate: 0 -262px;
+            }
+
+            #screen {
                 position: absolute;
                 background-color: lightskyblue;
                 height: 487px;
@@ -118,7 +150,8 @@
 
             #app3{
                 transform: scale3d(1, 1, 1);
-                transition: 0.3s
+                transition: 0.3s;
+                background-color: rgb(92, 92, 92);
             }
             #app3:hover{
                 transform: scale3d(1.1, 1.1, 1.1);
@@ -142,8 +175,58 @@
                 transform: scale3d(1.1, 1.1, 1.1);
                 transition: 0.3s
             }
+
+            #app6{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s
+            }
+            #app6:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
+            #app7{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s;
+                /* background-color: rgb(34, 34, 34); */
+            }
+            #app7:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
+            #app8{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s
+            }
+            #app8:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
+            #app9{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s
+            }
+            #app9:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
+            #app10{
+                transform: scale3d(1, 1, 1);
+                transition: 0.3s
+            }
+            #app10:hover{
+                transform: scale3d(1.1, 1.1, 1.1);
+                transition: 0.3s
+            }
+
         </style>
+        <link rel="stylesheet" type="text/css" href="appStyles.css"></script>
         <script src="jscript.js"></script>
+        <script src="cameraSketch.js"></script>
+        <script src="p5.min.js"></script>
     </head>
     
     <body>
@@ -151,6 +234,8 @@
             <div id="central-spcae">
                 <div id="phone-pos">
                     <div id="phone-outline">
+                        <div id="camera"></div>
+                        <div id="speaker"></div>
                         <div id="screen">
                             <div id="app-container">
                                 <div class="app" id="app1" onclick="app1()"></div>
@@ -158,6 +243,11 @@
                                 <div class="app" id="app3" onclick="app3()"></div>
                                 <div class="app" id="app4" onclick="app4()"></div>
                                 <div class="app" id="app5" onclick="app5()"></div>
+                                <div class="app" id="app6" onclick="app6()"></div>
+                                <div class="app" id="app7" onclick="app7()"></div>
+                                <div class="app" id="app8" onclick="app8()"></div>
+                                <div class="app" id="app9" onclick="app9()"></div>
+                                <div class="app" id="app10" onclick="app10()"></div>
                             </div>
                         </div>
                         <div onclick="homeFunct()" id="home-button">
@@ -166,7 +256,7 @@
                 </div>
                 <!-- <button onclick="appSlidePhone()">App stand in</button> -->
                 <!-- <button onclick="homeFunct()">Home button</button> -->
-                <button onclick="rotatePhone()">Rotate?</button>
+                <button onclick="rotatePhone()">Rotate</button>
             </div>
         </div>
     </body>
