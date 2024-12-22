@@ -29,6 +29,16 @@ function light_dark(){
     element.classList.toggle("dark-mode")
 }
 
+let orientation = 0;
+function rotatePhone(){
+    let phone = document.getElementById("phone-outline");
+    orientation += 90; 
+    phone.style.transform = "rotate(-"+orientation+"deg)";
+    if(orientation===360){
+        orientation = 0;
+    }
+}
+
 
             //  APP SCREEN INTERFACES   //
 
