@@ -60,7 +60,7 @@ Take a break and chill to some music which may suit your taste
 
 # BUGS
 
-# Phone app
+## Phone app
 There is a bug with the call app. If you're in it and click the notification for it the ringtone plays over the call.
 
 Not too sure on how to fix it.
