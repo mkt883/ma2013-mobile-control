@@ -314,7 +314,7 @@ function app7(){ //race
     <img style=" max-width: 195px;" src="social-relations-media/Rotating_earth_animated_transparent.gif">
     <p style="color: rgba(255, 255, 255, 0.622);">The mobile phone has allowed for cultures across the world to communicate with one another</p><br><br>
     <img style="border: solid white 2px; max-width: 265px;" src="social-relations-media/210414200721-restricted-02-false-facial-recognition-match-nijeer-parks-story.webp">
-    <p style="color: rgba(255, 255, 255, 0.622);">Police used an image of the suspect taken from a fake driver's license left at the scene (left) to run a facial recognition scan. It returned a "high profile comparison" to Nijeer Parks (right)<br><br><strong><em><a style="color: white; text-decoration: none;" href="https://edition.cnn.com/2021/05/09/us/techno-racism-explainer-trnd/index.html">Technoracism<a></em></strong></p><br><br>
+    <p style="color: rgba(255, 255, 255, 0.622);">Police used an image of the suspect taken from a fake driver's license left at the scene (left) to run a facial recognition scan. It returned a "high profile comparison" to Nijeer Parks (right)<br><br><strong><em><a style="color: white; text-decoration: none; target="blank_" href="https://edition.cnn.com/2021/05/09/us/techno-racism-explainer-trnd/index.html">Technoracism<a></em></strong></p><br><br>
     <img style="border: solid white 2px; max-width: 265px;" src="social-relations-media/istockphoto-1575561896-612x612.jpg">
     <p style="color: rgba(255, 255, 255, 0.622);">The police used the phone and social media to survey BLM protests and activists</p><br><br>
     </div>`;
